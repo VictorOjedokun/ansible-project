@@ -1,0 +1,13 @@
+- name: Create a test file with content
+  hosts: ec2
+  become: false
+
+  tasks:
+    - name: Create file
+      copy:
+        dest: /tmp/ansible_test_file.txt
+        content: |
+          Hello from Ansible
+          Safe automation test
+
+
